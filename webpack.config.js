@@ -1,0 +1,17 @@
+
+// webpack takes in all components and exports them to bundle.js
+module.exports = {
+  entry: "./app/App.js",
+  output: {
+    filename: "public/bundle.js"
+  },
+  module: {
+    loaders: [
+      {
+        test: /\.jsx?$/,
+        exclude: /(node_modules|bower_components)/,
+        loader: 'babel'
+      }
+    ]
+  }
+};
